@@ -1,0 +1,17 @@
+{
+  "name": "Cappy Hoding",
+  "short_name": "Cappy Hoding",
+  "description": "My (first) PWA App",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1e88e5",
+  "theme_color": "#1e88e5",
+  "gcm_sender_id": "670319867086",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
