@@ -34,3 +34,26 @@ workbox.routing.registerRoute(
   /\.(?:png|jpg|jpeg)$/,
   workbox.strategies.cacheFirst()
 );
+
+self.addEventListener('push', event => {
+  var body;
+  if (event.data) {
+    body = event.data.text();
+  } else {
+    body = 'Hello from MainBola';
+  }
+
+  var options = {
+    body: body,
+    icon: 'images/icon.png',
+    vibrate: [50, 75, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    }
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('MainBola', options)  
+  );
+});
